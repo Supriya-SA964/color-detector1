@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chroma | Advanced Color Detector</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Chroma</h1>
+            <p>Advanced Color Palette Detector</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Camera Section -->
+            <div class="card">
+                <h2><span class="icon">📷</span> Live Camera</h2>
+                <div class="media-container">
+                    <video id="video" autoplay></video>
+                </div>
+                <div class="controls">
+                    <button id="toggleCamera">Start Camera</button>
+                    <button id="detectFromCamera">Detect Palette</button>
+                </div>
+            </div>
+
+            <!-- Upload Section -->
+            <div class="card">
+                <h2><span class="icon">🖼️</span> Image Upload</h2>
+                <div class="media-container upload-area">
+                    <input type="file" id="imageUpload" accept="image/*" hidden>
+                    <label for="imageUpload" class="upload-label">Choose an Image</label>
+                </div>
+                <div class="controls">
+                    <!-- The "Choose" button is the label, and the "Detect" button is below -->
+                    <label for="imageUpload" class="btn-choose">Choose File</label>
+                    <button id="detectFromUpload">Detect Palette</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Result Section -->
+        <div class="result-section">
+            <h2><span class="icon">🎨</span> Extracted Palette</h2>
+            <div id="colorPalette">
+                <p class="placeholder">Your color palette will appear here...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden canvas for processing -->
+    <canvas id="canvas" style="display: none;"></canvas>
+    
+    <script src="script.js"></script>
+</body>
+</html>
