@@ -18,8 +18,7 @@ This is a **Color Detection Web Application** built using HTML, CSS, and JavaScr
 - `script.js` → JavaScript code to detect colors and display their names & HEX codes.
 - `README.md` → Project description.
 
-## Demo
-*(Optional: You can add a screenshot of your app here)*
+
 
 ## Future Improvements
 - Highlight multiple colors in an image automatically.
